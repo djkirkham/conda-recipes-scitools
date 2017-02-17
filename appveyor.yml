@@ -58,6 +58,13 @@ install:
     - cmd: set PATH=%PATH%;%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\scripts
     - cmd: set PYTHONUNBUFFERED=1
 
+    - cmd: conda list
+    - cmd: conda install --yes ruamel ruamel-yaml
+    - cmd: conda list
+    - cmd: conda install --yes --force python=3.5
+    - cmd: conda list
+
+
     - cmd: conda config --add channels scitools
     - cmd: conda config --set show_channel_urls yes
 
